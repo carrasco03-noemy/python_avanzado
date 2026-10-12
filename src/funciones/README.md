@@ -70,3 +70,21 @@ def suma(a:int,b:float)->int:
  def numeros_lista (a:int,b:int,c:int,d:int)->list[int]:
     return [a,b,c,d]
 ```
+
+- **PARAMETROS** - Los parametros son las variables que se declaran en la definicion de la funcion.
+- **ARGUMENTOS** - Es el dato concreto enviado en el llamado de la funcion.
+
+**NOTA** En ambos casos tenemos los *pocicionales/nominales*.
+
+```python
+# PARAMETROS
+ def suma(a,b) -> # En este caso tenemos una funcion suma que recibe dos parametros a,b.
+
+suma(34,45) -> # En este caso estoy llamando a la funcion pasandole como argumento los datos.
+
+# En este caso en concreto podemos decir que estamos frente a una funcion que tiene parametros posicionales,eso significa que cada valor reemplaza en el orden que le pasemos a las variables, 34 -> a, 45 -> b.
+
+def login(usuario="",password=""):
+    return "acceso correcto"
+login(password="12345678",usuario="tupapi") -> # Esta funcion es nominal por que para pasar los valores tengo que indicar la variable a la que le va asociar en el parametro de la funcion.
+```
