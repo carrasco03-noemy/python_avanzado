@@ -193,4 +193,8 @@ def resta (a,b):
     return a-b
 ```
 
-> [!WARNING] En el proceso de documentacion tener encuenta de incluir a lo menos lo siguiente:  1. Breve explicacion sobre que hace la funcion.  2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.  3. Restricciones de la funcion.  4. El valor que retorna y sus caracteristicas 
+> [!WARNING] En el proceso de documentacion tener encuenta de incluir a lo menos lo siguie:
+> 1. Breve explicacion sobre que hace la funcion.
+> 2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.
+> 3. Restricciones de la funcion.  
+> 4. El valor que retorna y sus caracteristicas.
