@@ -62,8 +62,6 @@ def suma(a:int,b:float)->int:
     return [a,b,c,d]
 ```
 
-------------------------------------------------------------------------------------
-
 **ARGUMENTOS PARAMETROS**
 
 ```python
@@ -198,3 +196,31 @@ def resta (a,b):
 > 2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.
 > 3. Restricciones de la funcion.  
 > 4. El valor que retorna y sus caracteristicas.
+
+## TYPE_HINTS (ANOTACIONES DE TIPO)
+
+Nos permite indicar que tipo de dato que tendra una variable,parametro y el valor de retorno de una funcion.
+Para utilizarlos debemos de indicar el tipo de dato despues del separador `:`, en el caso de valor retorno usaremos `->` luego el tipo de dato y finalmente el separador `:` que indica el inicio del bloque de codigo de la funcion.
+Las `anotaciones de tipo` son una herramienta que nos permite complementar la documentacion de nuestro codigo.
+**TENEMOS LOS SIGUIENTES**
+
+- **SIMPLES**
+   -int -> numero enteros
+   -float -> numeros decimales
+   -bool -> datos boleanos (verdad o falso)
+   -str -> datos de tipo texto o cadena
+   -list -> listas `[]`
+   -tuple -> tuplas `()`
+   -dict -> diccionarios `{}`
+
+- **COMPUESTOS**
+   Existen casos en los que necesitamos mas expresividad en la *anotacion de tipos* ¿que ocurre si queremos indicar una *lista de cadenas* o un *conjunto de enteros*.?
+   -list[str] -> lista de cadenas de texto.
+   -list[int] -> lista de numeros enteros.
+   -dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son flotantes/decimales.
+
+- **MULTIPLES**
+  En el caso que queramos indicar de un determinado parametro puede ser de un `tipo o de otro` tenemos que especificarlo usando el operador `|`
+  - tuple|dict -> puede ser dato de tipo tupla o diccionario
+  - list[str|int] -> lista cuyos elementos pueden ser cadenas de texto o enteros.
+  - dicts[str|int,float|int]-> diccionario cuya clave puede ser cadena o entero cuyo valor puede ser flotante o entero.
