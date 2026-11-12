@@ -192,6 +192,7 @@ def resta (a,b):
 ```
 
 > [!WARNING] En el proceso de documentacion tener encuenta de incluir a lo menos lo siguie:
+
 > 1. Breve explicacion sobre que hace la funcion.
 > 2. Especificaciones y caracteristicas de los parametros incluyendo sus tipos.
 > 3. Restricciones de la funcion.  
@@ -224,3 +225,14 @@ Las `anotaciones de tipo` son una herramienta que nos permite complementar la do
   - tuple|dict -> puede ser dato de tipo tupla o diccionario
   - list[str|int] -> lista cuyos elementos pueden ser cadenas de texto o enteros.
   - dicts[str|int,float|int]-> diccionario cuya clave puede ser cadena o entero cuyo valor puede ser flotante o entero.
+
+## CLOSURE
+
+Una `closure` o `clausura` sus funciones que establecen una funcion interior ,o retornan un funcion estas funciones se caracterisan por recordar el valor de los argumentos que se le pasa .
+
+```python
+def producto(n):
+    def multiplicador 
+    return n*m
+    return multiplicador
+```
