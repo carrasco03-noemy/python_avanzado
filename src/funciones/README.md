@@ -237,14 +237,18 @@ def producto(n):
     return multiplicador
 ```
 
-## programacion funcional
+## PROGRAMACION FUNCIONAL
+
 python es un ineguaje de programacion multiparadigma que mejor funcion tienen es la funcional.
 python usa tres `map()`,`filter()`,`reduce()`, pero nosotros solo usarmos `map()`,`filter()`.
 estas funciones integradas de python siirven para procesar y transformar colecciones de datos (listas,diccionarios) de manera muy eficiente:
 >[!TIP] Importante:
 > las funciones map()`y`filter() resiven dos parametros primero la funcion a ejecutar y segundo el iterable en que va actuar. la funcion que recive como parametro puede ser normal (`def`) o puede ser anonima (`lambda`).
-### 1. map ()
+
+### 1. MAP ()
+
 map aplica una funcion especifica a cada uno de los elementos de una coleccion (iterable) y devuelve un nuevo iterable con los resultados.
+
 ```python
 # de una lista de numeros deseamos calcular la potencia de cada numero
 numero:list[int]=[2,4,6,8,7]
@@ -259,11 +263,110 @@ map(lambda x:x**2,numeros)
 ### 2. filter()
 filter pasa cada elemento de una coleccion por una funcion y solo se queda con aquellos elementos dende la funcion devuelva true (es decir, filtra los datos segun una condicion).
 ```
+
 ```python
 # imagina que tienes una lista de numeros y solo quieres quedarte con los numeros pares.
 numeros:list[int]=[2,7,8,20,4,3,9,12,11,16,17]
 filter(lambda n:n % 2== 0,numeros)
+```
 
 >[!WARNING]nota importante
-> tanto map()`como `filter() no devuelven listas directamente, si no iteradores. esto es para ahorrar memoria (evaluacion perezosa o lazy evaluacion). si quieres ver el resultado como una lista tradicional, siempre debes envolver en list.
-```
+> tanto map()`como`filter() no devuelven listas directamente, si no iteradores. esto es para ahorrar memoria (evaluacion perezosa o lazy evaluacion). si quieres ver el resultado como una lista tradicional, siempre debes envolver en list.
+
+## COMPRENSION DE LISTA
+
+
+List Comprehension es una forma sencilla y rápida de crear nuevas listas utilizando una sola línea de código, en lugar de escribir muchas líneas con el ciclo FOR.
+
+1. List Comprehension básico
+
+Permite crear una nueva lista realizando operaciones con los elementos de otra lista.
+
+Ejemplo: elevar los números al cuadrado.
+
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [x**2 for x in numeros]
+print(cuadrados)
+
+Resultado: "[1, 4, 9, 16, 25]"
+
+2. List Comprehension con IF
+
+Permite seleccionar elementos que cumplen una condición.
+
+Ejemplo: obtener solamente los números pares.
+
+numeros = [1, 2, 3, 4, 5]
+pares = [x for x in numeros if x % 2 == 0]
+print(pares)
+
+Resultado: "[2, 4]"
+
+3. List Comprehension anidado
+
+Permite crear listas dentro de otras listas, como una matriz, utilizando dos ciclos FOR.
+
+Ejemplo:
+
+matriz = [[j for j in range(1, 4)] for i in range(3)]
+print(matriz)
+
+Resultado:
+
+[[1, 2, 3],
+ [1, 2, 3],
+ [1, 2, 3]]
+
+Conclusión:
+
+List Comprehension es una herramienta de Python que permite crear listas, realizar operaciones y aplicar condiciones de manera más fácil, rápida y con menos líneas de código.
+
+## DICCIONARIOS POR COMPRENSION
+
+Los diccionarios por comprensión permiten crear nuevos diccionarios de manera sencilla y rápida utilizando una sola línea de código. Se pueden crear elementos con una clave y un valor a partir de otros datos.
+
+1. Diccionario básico por comprensión
+
+Permite crear un diccionario a partir de una lista.
+
+Ejemplo:
+
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {x: x**2 for x in numeros}
+print(cuadrados)
+
+Resultado:
+
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+2. Diccionario con IF
+
+Permite agregar solamente los elementos que cumplen una condición.
+
+Ejemplo: guardar solo los números pares.
+
+numeros = [1, 2, 3, 4, 5]
+pares = {x: x for x in numeros if x % 2 == 0}
+print(pares)
+
+Resultado:
+
+{2: 2, 4: 4}
+
+3. Diccionario con operaciones
+
+Permite realizar operaciones con los valores al crear el diccionario.
+
+Ejemplo: multiplicar cada número por dos.
+
+numeros = [1, 2, 3]
+dobles = {x: x*2 for x in numeros}
+print(dobles)
+
+Resultado:
+
+{1: 2, 2: 4, 3: 6}
+
+Conclusión:
+
+Los diccionarios por comprensión permiten crear diccionarios en una sola línea de código, utilizando condiciones y operaciones. Su estructura utiliza llaves "{}" y permite guardar datos mediante claves y valores.
