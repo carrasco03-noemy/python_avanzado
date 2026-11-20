@@ -275,7 +275,6 @@ filter(lambda n:n % 2== 0,numeros)
 
 ## COMPRENSION DE LISTA
 
-
 List Comprehension es una forma sencilla y rápida de crear nuevas listas utilizando una sola línea de código, en lugar de escribir muchas líneas con el ciclo FOR.
 
 1. List Comprehension básico
@@ -284,30 +283,33 @@ Permite crear una nueva lista realizando operaciones con los elementos de otra l
 
 Ejemplo: elevar los números al cuadrado.
 
+```python
 numeros = [1, 2, 3, 4, 5]
 cuadrados = [x**2 for x in numeros]
 print(cuadrados)
 
 Resultado: "[1, 4, 9, 16, 25]"
+```
 
 2. List Comprehension con IF
 
 Permite seleccionar elementos que cumplen una condición.
 
 Ejemplo: obtener solamente los números pares.
-
+```python
 numeros = [1, 2, 3, 4, 5]
 pares = [x for x in numeros if x % 2 == 0]
 print(pares)
 
 Resultado: "[2, 4]"
+```
 
 3. List Comprehension anidado
 
 Permite crear listas dentro de otras listas, como una matriz, utilizando dos ciclos FOR.
 
 Ejemplo:
-
+```python
 matriz = [[j for j in range(1, 4)] for i in range(3)]
 print(matriz)
 
@@ -316,7 +318,7 @@ Resultado:
 [[1, 2, 3],
  [1, 2, 3],
  [1, 2, 3]]
-
+```
 Conclusión:
 
 List Comprehension es una herramienta de Python que permite crear listas, realizar operaciones y aplicar condiciones de manera más fácil, rápida y con menos líneas de código.
@@ -330,7 +332,7 @@ Los diccionarios por comprensión permiten crear nuevos diccionarios de manera s
 Permite crear un diccionario a partir de una lista.
 
 Ejemplo:
-
+```python
 numeros = [1, 2, 3, 4, 5]
 cuadrados = {x: x**2 for x in numeros}
 print(cuadrados)
@@ -338,13 +340,13 @@ print(cuadrados)
 Resultado:
 
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
-
+```
 2. Diccionario con IF
 
 Permite agregar solamente los elementos que cumplen una condición.
 
 Ejemplo: guardar solo los números pares.
-
+```python
 numeros = [1, 2, 3, 4, 5]
 pares = {x: x for x in numeros if x % 2 == 0}
 print(pares)
@@ -352,13 +354,13 @@ print(pares)
 Resultado:
 
 {2: 2, 4: 4}
-
+```
 3. Diccionario con operaciones
 
 Permite realizar operaciones con los valores al crear el diccionario.
 
 Ejemplo: multiplicar cada número por dos.
-
+```python
 numeros = [1, 2, 3]
 dobles = {x: x*2 for x in numeros}
 print(dobles)
@@ -366,7 +368,7 @@ print(dobles)
 Resultado:
 
 {1: 2, 2: 4, 3: 6}
-
+``` 
 Conclusión:
 
 Los diccionarios por comprensión permiten crear diccionarios en una sola línea de código, utilizando condiciones y operaciones. Su estructura utiliza llaves "{}" y permite guardar datos mediante claves y valores.
